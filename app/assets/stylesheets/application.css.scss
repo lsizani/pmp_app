@@ -1,0 +1,217 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+@import "modules/input-label";
+@import "modules/devise";
+@import "modules/vendor";
+@import "fontawesome/font-awesome";
+@import "modules/app-custom";
+@import "modules/app-blue";
+@import "modules/app";
+
+.slide-show {
+    width: 900px;
+    height: 500px;
+    align-self: center;
+    align-content: center;
+    padding: 20px;
+}
+
+.banner {
+  width: 50%;
+}
+
+.banner img {
+  width: inherit;
+  height: inherit;
+}
+
+.main {
+  background-image: image-url('background.jpg') !important;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.left-col {
+  background-color: #BBBBBB;
+}
+
+.right-col {
+  background-color: #999999;
+}
+
+.padding-20 {
+  padding: 20px;
+}
+
+label {
+  color: white;
+}
+
+$welcome-orange: #F26A22;
+
+.bg-image {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+}
+
+#sign-in {
+  margin: 0;
+
+  .overlay {
+    left: 0;
+    height: 100vh;
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.45);
+
+    @media (max-width: 580px) {
+      width: 100%;
+    }
+
+    @media (min-width: 581px) {
+      width: 45%;
+    }
+
+    @media (min-width: 992px) {
+      width: 33%;
+    }
+  }
+
+  .logo {
+
+    img {
+      display: block;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .message {
+    margin: 5% 10% 20% 10%;
+    text-align: center;
+
+    h1 {
+      font-size: 25px;
+      font-weight: 300;
+      margin-bottom: 15px;
+      color: white;
+    }
+  }
+
+  .form {
+    margin-top: 25px;
+
+    .fa {
+      position: fixed;
+      padding: 10px;
+    }
+
+    small {
+      color: #EAEAEA;
+    }
+
+    .alert {
+      display: block;
+      margin: auto;
+      width: 90%;
+      max-width: 400px;
+      margin-bottom: 20px;
+    }
+
+    .welcome-username {
+      font-size: 14px;
+      padding-top: 6px !important;
+      text-transform: lowercase;
+    }
+
+    .form-group {
+      display: block;
+      margin: auto;
+      width: 80%;
+      max-width: 300px;
+      margin-bottom: 10%;
+    }
+
+    .form-control {
+      background: transparent;
+      border-radius: 0;
+      border: none;
+      border-bottom: 1px solid #969696;
+      text-indent:20px;
+      color: white;
+
+      &:focus + .input-orange-border {
+        transform: scaleX(1) translateY(-2px);
+        opacity: 1;
+      }
+    }
+
+    .minus-margin-bottom {
+      margin-bottom: 0;
+    }
+
+    .input-orange-border {
+      height: 2px;
+      width: 100%;
+      background: $welcome-orange;
+      display: block;
+      transform: scaleX(0) translateY(-2px);
+      transform-origin: 50%;
+      opacity: 0;
+      transition: all .25s linear;
+    }
+
+    .form-submit {
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: block;
+      margin: auto;
+      font-size: 11px;
+      color: #FFF;
+      background-color: $welcome-orange;
+      border: 0;
+      padding: 8px 16px;
+      letter-spacing: 2px;
+      -webkit-box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.25s ease;
+      width: 30%;
+      &:hover {
+        background-color: #C35419;
+      }
+    }
+  }
+
+  .link {
+    a {
+      color: #FFF;
+      text-decoration: underline;
+      font-size: 15px;
+    }
+
+    margin-top: 5%;
+    text-align: center;
+  }
+}
+
+.action-view {
+  height: 1000px;
+  background-color: pink;
+}

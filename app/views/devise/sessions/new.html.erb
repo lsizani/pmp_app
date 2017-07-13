@@ -1,0 +1,40 @@
+<div id="sign-in">
+  <div class="overlay">
+    <div class="message">
+      <%= image_tag 'logo.png' , width: 100, height: 100%>
+      <h1>Log in</h1>
+    </div>
+    <div class="form">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="form-group">
+          <%= render partial: './common/flash' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, class: 'form-control', required: true %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: 'off', class: 'form-control', required: true %>
+        </div>
+
+        <% if devise_mapping.rememberable? -%>
+          <div class="form-group">
+            <%= f.check_box :remember_me %> &nbsp;
+            <%= f.label :remember_me %>
+          </div>
+        <% end -%>
+
+          <div class="form-submit link">
+          <%= f.submit 'LOGIN', class: 'btn' %>
+        </div>
+      <% end %>
+    </div>
+    <div class="link">
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>
+
+<%= render partial: './common/background' %>

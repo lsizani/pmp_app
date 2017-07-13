@@ -1,0 +1,49 @@
+.form-group {
+  position: relative;
+}
+
+.form-control {
+  margin-bottom: 10%;
+  position: relative;
+  width: 100%;
+  z-index: 3;
+  color: #FFF;
+}
+
+.label-helper {
+  position: absolute;
+  opacity: 0;
+  transition: .4s bottom, .4s opacity;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.form-control:focus + .label-helper {
+  bottom: 95%;
+  font-size: 14px;
+  line-height: 1;
+  opacity: 1;
+  padding: 4px;
+  color: #FFF;
+}
+
+[placeholder]:focus::-webkit-input-placeholder  {
+  color:transparent;
+  transition: .4s, .4s opacity;
+
+}
+
+[placeholder]:focus::-moz-placeholder  {
+  color:transparent;
+  transition: .4s, .4s opacity;
+}
+
+.form-control:valid + .label-helper {
+  bottom: 95%;
+  font-size: 14px;
+  line-height: 1;
+  opacity: 1;
+  padding: 4px;
+  color: #FFF;
+}
