@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'welcome#index'
+  root to: 'dashboard#index'
   resources :dashboard, only: [:index]
   resources :users, only: [:index]
   resources :calender_event_registers, only: [:index]

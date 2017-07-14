@@ -69,7 +69,7 @@ const AppNavBar = ({ user }) => {
               <i className="fa fa-users icon"> </i>
               Manage Users
             </a>
-              <div className="dropdown-divider"> </div> <a className="dropdown-item" onClick={signOut}>
+              <div className="dropdown-divider"> </div> <a className="dropdown-item" href="/" onClick={signOut}>
                 <i className="fa fa-power-off icon"> </i>
                 Logout
               </a> </div>

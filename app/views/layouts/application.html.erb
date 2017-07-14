@@ -13,8 +13,8 @@
 
   <body>
   <div class="main">
-    <div class="main-wrapper">
-      <div class="app" id="app">
+    <div class="<%= user_signed_in? ? 'main-wrapper' : '' %>" >
+      <div class="<%= user_signed_in? ? 'app' : '' %>" id="app">
         <% if user_signed_in? %>
             <%= react_component 'AppNavBar', { user: current_user } %>
             <%= react_component 'SideBarNav', { isSignedIn: current_user.present? } %>
