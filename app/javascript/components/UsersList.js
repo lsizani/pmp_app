@@ -21,8 +21,8 @@ const UsersList = ({ users }) => {
             </tr>
             </thead>
             <tbody>
-            { users.map((user) => (
-                <tr>
+            { users.map((user, i) => (
+                <tr key={i}>
                   <td>{user.first_name}</td>
                   <td>{user.last_name}</td>
                   <td>{user.email}</td>

@@ -23,32 +23,21 @@ class SideBarNav extends Component {
             </div>
             <nav className="menu">
               <ul className="nav metismenu" id="sidebar-menu">
-                <li className="active"> <a href="index.html">
-                  <i className="fa fa-home"> </i> Dashboard
-                </a> </li>
-                <li> <a href="">
-                  <i className="fa fa-th-large"> </i> Items Manager
-                  <i className="fa arrow"> </i>
-                </a>
-                  <ul>
-                    <li> <a href="items-list.html">
-                      Items List
-                    </a> </li>
-                    <li> <a href="item-editor.html">
-                      Item Editor
-                    </a> </li>
-                  </ul>
+                <li className="active"> <a href="/">
+                  <i className="fa fa-home"> </i> Dashboard</a>
                 </li>
                 <li> <a href="">
-                  <i className="fa fa-bar-chart"> </i> Charts
-                  <i className="fa arrow"> </i>
-                </a>
+                  <i className="fa fa-calendar"> </i> Calendar Events
+                  <i className="fa arrow"> </i></a>
                   <ul>
-                    <li> <a href="charts-flot.html">
-                      Flot Charts
+                    <li> <a href="/calender_events">
+                      Events
                     </a> </li>
-                    <li> <a href="charts-morris.html">
-                      Morris Charts
+                    <li> <a href="/calender_event_registers">
+                      Registers
+                    </a> </li>
+                    <li> <a href="/rosters">
+                      Roster
                     </a> </li>
                   </ul>
                 </li>
@@ -57,67 +46,23 @@ class SideBarNav extends Component {
                   <i className="fa arrow"> </i>
                 </a>
                   <ul>
-                    <li> <a href="static-tables.html">
-                      Static Tables
+                    <li> <a href="/mentors">
+                      Mentors
                     </a> </li>
-                    <li> <a href="responsive-tables.html">
-                      Responsive Tables
+                    <li> <a href="/head_mentors">
+                      Head Mentors
+                    </a> </li>
+                    <li> <a href="/sscs">
+                      SSC's
+                    </a> </li>
+                    <li> <a href="/mentees">
+                      Mentees
                     </a> </li>
                   </ul>
                 </li>
-                <li> <a href="forms.html">
+                <li> <a href="#">
                   <i className="fa fa-pencil-square-o"> </i> Forms
                 </a> </li>
-                <li> <a href="">
-                  <i className="fa fa-desktop"> </i> UI Elements
-                  <i className="fa arrow"> </i>
-                </a>
-                  <ul>
-                    <li> <a href="buttons.html">
-                      Buttons
-                    </a> </li>
-                    <li> <a href="cards.html">
-                      Cards
-                    </a> </li>
-                    <li> <a href="typography.html">
-                      Typography
-                    </a> </li>
-                    <li> <a href="icons.html">
-                      Icons
-                    </a> </li>
-                    <li> <a href="grid.html">
-                      Grid
-                    </a> </li>
-                  </ul>
-                </li>
-                <li> <a href="">
-                  <i className="fa fa-file-text-o"></i> Pages
-                  <i className="fa arrow"></i>
-                </a>
-                  <ul>
-                    <li> <a href="login.html">
-                      Login
-                    </a> </li>
-                    <li> <a href="signup.html">
-                      Sign Up
-                    </a> </li>
-                    <li> <a href="reset.html">
-                      Reset
-                    </a> </li>
-                    <li> <a href="error-404.html">
-                      Error 404 App
-                    </a> </li>
-                    <li> <a href="error-404-alt.html">
-                      Error 404 Global
-                    </a> </li>
-                    <li> <a href="error-500.html">
-                      Error 500 App
-                    </a> </li>
-                    <li> <a href="error-500-alt.html">
-                      Error 500 Global
-                    </a> </li>
-                  </ul>
-                </li>
               </ul>
             </nav>
           </div>

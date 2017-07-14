@@ -55,17 +55,17 @@ const AppNavBar = ({ user }) => {
             </div>
           </li>
           <li className="profile dropdown">
-            <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <a className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
               <div className="img"> </div> <span className="name">
                 {user.first_name} {user.last_name}
     			    </span> </a>
             <div className="dropdown-menu profile-dropdown-menu" aria-labelledby="dropdownMenu1"> <a className="dropdown-item" onClick={profile}>
               <i className="fa fa-user icon"> </i>
               Profile
-            </a> <a className="dropdown-item" href="#">
+            </a> <a className="dropdown-item" href="/">
               <i className="fa fa-bell icon"> </i>
               Notifications
-            </a> <a className="dropdown-item" href="#" onClick={users}>
+            </a> <a className="dropdown-item" href="/" onClick={users}>
               <i className="fa fa-users icon"> </i>
               Manage Users
             </a>

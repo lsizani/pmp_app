@@ -20,6 +20,7 @@
 #  roles_mask             :integer
 #  student_id             :integer
 #  notifications          :integer          default(0)
+#  student_number         :string
 #
 # Indexes
 #
