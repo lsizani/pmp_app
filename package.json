@@ -41,5 +41,6 @@
   },
   "devDependencies": {
     "webpack-dev-server": "^2.5.1"
-  }
+  },
+  "version": "0.0.1"
 }
