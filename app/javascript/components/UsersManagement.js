@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { provide } from '../containers/provide';
 import PropTypes from 'prop-types';
 import { Modal } from 'react-bootstrap';
 import UsersList from './UsersList';
 import { FormGroup, ControlLabel, FormControl, HelpBlock } from 'react-bootstrap';
-import userManagementScreen from '../modules/user-management-screen/reducer';
-import * as actionCreators from '../modules/user-management-screen/actions/action-creators';
+
 
 
 const propTypes = {
@@ -209,16 +205,3 @@ class UsersManagement extends Component {
 }
 
 UsersManagement.propTypes = propTypes;
-
-const mapStateToProps = state => ({
-  users: userManagementScreen.users,
-  loadingUsers: userManagementScreen.loadingUsers,
-});
-
-const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators(actionCreators, dispatch)
-});
-
-export default provide(
-  connect(mapStateToProps, mapDispatchToProps)(UsersManagement)
-);
