@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { provide } from '../containers/provide';
 import PropTypes from 'prop-types';
 import { Modal } from 'react-bootstrap';
 import UsersList from './UsersList';
 import { FormGroup, ControlLabel, FormControl, HelpBlock } from 'react-bootstrap';
+import userManagementScreen from '../modules/user-management-screen/reducer';
+import * as actionCreators from '../modules/user-management-screen/actions/action-creators';
+
 
 const propTypes = {
-   users : PropTypes.array.isRequired
+   users : PropTypes.array,
+   loadingUsers: PropTypes.bool,
+   //actions: PropTypes.object.isRequired,
 };
 
 class UsersManagement extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showUserModal: false,
-      first_name: '',
-      last_name: '',
-      email: '',
-      roles: [],
-      student_number: '',
-      password: '',
-      password_confirmation: ''
+      showUserModal: false
     };
     this.close = this.close.bind(this);
     this.open = this.open.bind(this);
@@ -89,9 +90,11 @@ class UsersManagement extends Component {
           <h1 className="title"> Manage Users </h1>
           <p className="title-description"> Add/Edit app users </p>
         </div>
-        <UsersList
-          users={this.props.users}
-        />
+        { this.state.users &&
+          <UsersList
+            users={this.state.users}
+          />
+        }
         <div className="card-block">
           <button type="button"
                   className="btn btn-oval btn-primary pull-right"
@@ -206,4 +209,16 @@ class UsersManagement extends Component {
 }
 
 UsersManagement.propTypes = propTypes;
-export default UsersManagement;
+
+const mapStateToProps = state => ({
+  users: userManagementScreen.users,
+  loadingUsers: userManagementScreen.loadingUsers,
+});
+
+const mapDispatchToProps = dispatch => ({
+  actions: bindActionCreators(actionCreators, dispatch)
+});
+
+export default provide(
+  connect(mapStateToProps, mapDispatchToProps)(UsersManagement)
+);

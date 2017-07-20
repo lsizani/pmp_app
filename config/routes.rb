@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :rosters, only: [:index]
   resources :mentees, only: [:index]
   resources :mentors, only: [:index]
+  resources :tasks, only: [:index]
 
   match '/head_mentors' => 'mentors#heads', via: :get
   match '/sscs' => 'mentors#sscs', via: :get
@@ -20,6 +21,8 @@ Rails.application.routes.draw do
       resources :rosters, only: %w[index create update edit]
       resources :mentees, only: %w[index create update edit]
       resources :mentors, only: %w[index create update edit]
+      resources :tasks
+      resources :notifications
     end
   end
 end

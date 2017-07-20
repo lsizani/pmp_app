@@ -2,7 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
-  users: PropTypes.array.isRequired,
+  users: PropTypes.shape({
+    firstName: PropTypes.string.isRequired,
+    lastName: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    roles: PropTypes.array.isRequired,
+  }).isRequired,
 };
 
 const UsersList = ({ users }) => {
@@ -23,8 +28,8 @@ const UsersList = ({ users }) => {
             <tbody>
             { users.map((user, i) => (
                 <tr key={i}>
-                  <td>{user.first_name}</td>
-                  <td>{user.last_name}</td>
+                  <td>{user.firstName}</td>
+                  <td>{user.lastName}</td>
                   <td>{user.email}</td>
                   <td>{user.roles}</td>
                   <td>

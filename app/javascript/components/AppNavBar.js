@@ -5,7 +5,7 @@ const propTypes = {
   user: PropTypes.shape({
     first_name: PropTypes.string.isRequired,
     last_name: PropTypes.string.isRequired,
-    notifications: PropTypes.number.isRequired,
+    notifications_count: PropTypes.number.isRequired,
   }).isRequired
 };
 
@@ -39,7 +39,7 @@ const AppNavBar = ({ user }) => {
           <li className="notifications new"> <a href="" data-toggle="dropdown">
             <i className="fa fa-bell-o"> </i>
             <sup>
-              <span className="counter">{user.notifications}</span>
+              <span className="counter">{user.notifications_count}</span>
             </sup>
           </a>
             <div className="dropdown-menu notifications-dropdown-menu">

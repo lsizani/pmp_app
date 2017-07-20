@@ -19,7 +19,7 @@
 #  last_name              :string
 #  roles_mask             :integer
 #  student_id             :integer
-#  notifications          :integer          default(0)
+#  notifications_count    :integer          default(0)
 #  student_number         :string
 #
 # Indexes

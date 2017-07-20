@@ -57,10 +57,6 @@
   padding: 20px;
 }
 
-label {
-  color: white;
-}
-
 $welcome-orange: #F26A22;
 
 .bg-image {
@@ -71,6 +67,10 @@ $welcome-orange: #F26A22;
 
 #sign-in {
   margin: 0;
+
+  label {
+    color: white;
+  }
 
   .overlay {
     left: 0;
