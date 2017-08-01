@@ -17,10 +17,10 @@
 #  updated_at             :datetime         not null
 #  first_name             :string
 #  last_name              :string
-#  roles_mask             :integer
 #  student_id             :integer
 #  notifications_count    :integer          default(0)
 #  student_number         :string
+#  role                   :integer
 #
 # Indexes
 #

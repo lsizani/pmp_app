@@ -43,6 +43,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
+  gem 'graphiql-rails'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
 end
@@ -58,6 +59,6 @@ end
 
 gem 'cancancan'
 gem 'devise'
+gem 'graphql'
 gem 'jquery-rails'
 gem 'react-rails'
-

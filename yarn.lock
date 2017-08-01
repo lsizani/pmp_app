@@ -2113,6 +2113,10 @@ graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
+graphql.js@^0.4.18:
+  version "0.4.18"
+  resolved "https://registry.yarnpkg.com/graphql.js/-/graphql.js-0.4.18.tgz#6cd2376aa60bb6f9724bc1c9e8b4b837b50b3cb2"
+
 handle-thing@^1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/handle-thing/-/handle-thing-1.2.5.tgz#fd7aad726bf1a5fd16dfc29b2f7a6601d27139c4"

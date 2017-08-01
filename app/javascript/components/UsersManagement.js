@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Modal } from 'react-bootstrap';
 import UsersList from './UsersList';
 import { FormGroup, ControlLabel, FormControl, HelpBlock } from 'react-bootstrap';
-
+import 'graphql.js';
 
 
 const propTypes = {
@@ -23,6 +23,20 @@ class UsersManagement extends Component {
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleRoleSelect = this.handleRoleSelect.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentDidMount() {
+    let graph = graphql("/graphql", {
+        headers: {
+          "X-CSRF-Token": $('meta[name="csrf-token"]').attr('content')
+        }
+      });
+    let allUsers = graph(`query { users(){} }`);
+    let user = graph(`query { user(){id, first_name} }`);
+
+    user().then(function (user) {
+      console.log(user)
+    })
   }
 
   close() {
@@ -205,3 +219,4 @@ class UsersManagement extends Component {
 }
 
 UsersManagement.propTypes = propTypes;
+export default UsersManagement;
