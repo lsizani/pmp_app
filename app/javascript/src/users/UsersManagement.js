@@ -4,8 +4,6 @@ import { Modal } from 'react-bootstrap';
 import UsersList from './UsersList';
 import { FormGroup, ControlLabel, FormControl, HelpBlock } from 'react-bootstrap';
 
-
-
 const propTypes = {
    users : PropTypes.array,
    loadingUsers: PropTypes.bool,
@@ -205,3 +203,4 @@ class UsersManagement extends Component {
 }
 
 UsersManagement.propTypes = propTypes;
+export default UsersManagement;

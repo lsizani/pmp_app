@@ -13,5 +13,12 @@
 #  updated_at       :datetime         not null
 #
 
-class TasksController < ApplicationController
+class UserTask < ApplicationRecord
+  self.table_name = 'tasks'
+  belongs_to :assignee, class_name: 'User'
+  enum status: { pending: 0, in_progress: 1, completed: 2 }
+
+  def assigner
+    User.find(assigner_id)
+  end
 end

@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
-import Tasks from './Tasks';
-
-const propTypes = {
-  
-};
+import TasksList from './tasks/containers/TasksList';
 
 class Dashboard extends Component {
   render() {
@@ -35,12 +31,10 @@ class Dashboard extends Component {
         </section>
         <section className="section map-tasks">
           <div className="row sameheight-container">
-            <div className="col-md-8">
-
+            <div className="col-md-7">
+              <TasksList />
             </div>
-
-            <div className="col-md-4">
-               <Tasks />
+            <div className="col-md-5">
             </div>
           </div>
         </section>
@@ -49,5 +43,4 @@ class Dashboard extends Component {
   }
 }
 
-Dashboard.PropTypes = propTypes;
 export default Dashboard;

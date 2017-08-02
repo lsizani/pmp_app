@@ -17,10 +17,10 @@
 #  updated_at             :datetime         not null
 #  first_name             :string
 #  last_name              :string
-#  roles_mask             :integer
 #  student_id             :integer
 #  notifications_count    :integer          default(0)
 #  student_number         :string
+#  role                   :integer
 #
 # Indexes
 #
@@ -33,6 +33,9 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  has_many :tasks, class_name: 'UserTask', foreign_key: 'assignee_id'
+  has_many :delegated_tasks, class_name: 'UserTask', foreign_key: 'assigner_id'
 
   ROLES = %w[sys_admin admin ssc head mentor mentee].freeze
 
@@ -56,5 +59,9 @@ class User < ApplicationRecord
 
   def only?(role)
     roles.size == 1 && is?(role)
+  end
+
+  def name
+    "#{first_name} #{last_name}"
   end
 end
