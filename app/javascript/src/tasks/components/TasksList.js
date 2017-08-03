@@ -58,10 +58,6 @@ class TasksList extends Component {
     )
   }
 }
-const mapStateToProps = state => ({
-  tasks: state.tasksReducer.tasks,
-});
-export default provide(
-  connect(mapStateToProps)(TasksList)
-);
+
+export default TasksList;
 

@@ -30,7 +30,7 @@ class Dashboard extends Component {
           </div>
         </section>
         <section className="section map-tasks">
-          <div className="row sameheight-container">
+          <div className="row">
             <div className="col-md-7">
               <TasksList />
             </div>

@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 import { PropTypes } from 'prop-types';
 
-const propTypes = {
-
-};
-
 class SideBarNav extends Component {
   render() {
     return(
@@ -66,9 +62,6 @@ class SideBarNav extends Component {
               </ul>
             </nav>
           </div>
-          <footer className="sidebar-footer">
-            Copyright
-          </footer>
         </aside>
         <div className="sidebar-overlay" id="sidebar-overlay"> </div>
       </div>
@@ -76,5 +69,4 @@ class SideBarNav extends Component {
   }
 }
 
-SideBarNav.propTypes = propTypes;
 export default SideBarNav;

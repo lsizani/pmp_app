@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux'
 import { LOAD_TASKS_RESPONSE } from "../constants/actionTypes";
 
 export const tasks = (state = [], action) => {
@@ -10,9 +9,4 @@ export const tasks = (state = [], action) => {
   }
 };
 
-
-const tasksReducer = combineReducers({
-  tasks
-});
-
-export default tasksReducer;
+export default tasks;

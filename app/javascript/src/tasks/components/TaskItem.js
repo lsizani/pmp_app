@@ -13,44 +13,16 @@ const propTypes = {
 
 const TaskItem = ({task}) => {
   return(
-    <li className="item">
+    <li className="item padding-10">
       <div className="item-row">
         <div className="item-col item-col-title">
-          <label>
-            <input className="checkbox" type="checkbox" checked="checked" />
-            <span>{task.taskName} Assigned To: {task.assignerName} By: {task.assigneeName} Status: {task.status}</span>
-          </label>
+          <input className="checkbox" type="checkbox" />
+          <span>{task.taskName} Assigned To: {task.assignerName} By: {task.assigneeName} Status: {task.status}</span>
         </div>
-        <div className="item-col fixed item-col-actions-dropdown">
-          <div className="item-actions-dropdown">
-            <a className="item-actions-toggle-btn">
-              <span className="inactive">
-                  <i className="fa fa-cog"> </i>
-              </span>
-              <span className="active">
-                <i className="fa fa-chevron-circle-right"> </i>
-              </span>
-            </a>
-            <div className="item-actions-block">
-              <ul className="item-actions-list">
-                <li>
-                  <a className="remove" href="#" data-toggle="modal" data-target="#confirm-modal">
-                    <i className="fa fa-trash-o "> </i>
-                  </a>
-                </li>
-                <li>
-                  <a className="check" href="#">
-                    <i className="fa fa-check"> </i>
-                  </a>
-                </li>
-                <li>
-                  <a className="edit" href="/app/assets/fonts">
-                    <i className="fa fa-pencil"> </i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div className="item-col fixed">
+          <span className="inactive">
+            <i className="fa fa-cog"> </i>
+          </span>
         </div>
       </div>
     </li>
