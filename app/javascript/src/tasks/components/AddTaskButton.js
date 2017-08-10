@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { addTask } from '../actions/actions';
 
-let AddTask = ({ dispatch }) => {
+let AddTaskButton = ({ dispatch }) => {
   return(
     <a className="btn btn-primary btn-sm rounded pull-right">
       Add Task
@@ -10,4 +10,4 @@ let AddTask = ({ dispatch }) => {
   )
 };
 
-export default AddTask;
+export default AddTaskButton;

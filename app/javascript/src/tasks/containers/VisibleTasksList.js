@@ -1,6 +1,8 @@
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux';
 import TasksList from '../components/TasksList';
 import * as c from '../constants/filters';
+import * as actionCreators from '../actions/actions';
 
 const getVisibleTasks = (tasks, filter) => {
   switch (filter) {
@@ -13,7 +15,7 @@ const getVisibleTasks = (tasks, filter) => {
     case c.PENDING:
       return tasks.filter(t => t.status === 'pending');
     default:
-      throw new Error('Unknown filter: ' + filter)
+      return tasks;
   }
 };
 
@@ -21,12 +23,9 @@ const mapStateToProps = (state) => ({
   tasks: getVisibleTasks(state.tasksReducer.tasks, state.visibilityFilter)
 });
 
-// const mapDispatchToProps = {
-//   onTodoClick: toggleTodo
-// }
+const mapDispatchToProps = dispatch => ({
+  actions: bindActionCreators(actionCreators, dispatch)
+});
 
-const VisibleTasksList = connect(
-  mapStateToProps,
-)(TasksList);
-
+const VisibleTasksList = connect(mapStateToProps, mapDispatchToProps)(TasksList);
 export default VisibleTasksList;

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
   task: PropTypes.shape({
+    id: PropTypes.number.isRequired,
     taskName: PropTypes.string.isRequired,
     assignerName: PropTypes.string,
     assigneeName: PropTypes.string,

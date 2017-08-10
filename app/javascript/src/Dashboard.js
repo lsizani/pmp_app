@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { PropTypes } from 'prop-types';
-import TasksList from './tasks/containers/TasksList';
+import {provide} from './shared/provide'
+import Tasks from './tasks/components/Tasks';
 
 class Dashboard extends Component {
   render() {
@@ -32,7 +32,7 @@ class Dashboard extends Component {
         <section className="section map-tasks">
           <div className="row">
             <div className="col-md-7">
-              <TasksList />
+              <Tasks />
             </div>
             <div className="col-md-5">
             </div>
@@ -43,4 +43,4 @@ class Dashboard extends Component {
   }
 }
 
-export default Dashboard;
+export default provide(Dashboard);
